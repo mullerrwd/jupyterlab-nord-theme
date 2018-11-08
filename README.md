@@ -1,6 +1,6 @@
-# Jupyterlab-nord-theme
+<h1 align="center">Nord Jupyter Lab Theme</h1>
 <p align="center">An arctic, north-bluish clean and elegant <a href="https://github.com/jupyterlab/jupyterlab">Jupyter Lab</a> theme.<br>
-Based on the <a href="https://github.com/arcticicestudio/nord">Nord</a> color palette.
+Based on the <a href="https://github.com/arcticicestudio/nord">Nord</a> color palette.</p>
 
 <p align="center"><b>Work in progress.</b></p>
 
