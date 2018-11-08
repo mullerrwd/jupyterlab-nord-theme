@@ -1,16 +1,15 @@
 {
-  "extends": "../../tsconfigbase",
   "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "src"
+    "declaration": true,
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2015",
+    "outDir": "./lib",
+    "lib": ["ES2015", "DOM"],
+    "types": []
   },
-  "include": ["src/*"],
-  "references": [
-    {
-      "path": "../application"
-    },
-    {
-      "path": "../apputils"
-    }
-  ]
+  "include": ["src/*"]
 }

@@ -25,6 +25,36 @@ all of MD as it is not optimized for dense, information rich UIs.
 */
 
 :root {
+  /* Nord Color Palette
+   *
+   * Based on the Nord color palette
+   * https://github.com/arcticicestudio/nord
+   */
+   
+  /* Styleguide Nord - Polar Night */
+  --nordb: #252932;
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  /* Styleguide Nord - Snow Storm */
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  /* Styleguide Nord - Frost */
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  /* Styleguide Nord - Aurora */
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+
+  --idk:   #ff0019;
+
   /* Elevation
    *
    * We style box-shadows using Material Design's idea of elevation. These particular numbers are taken from here:
@@ -87,10 +117,10 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-border-width: 1px;
-  --jp-border-color0: var(--md-grey-400);
-  --jp-border-color1: var(--md-grey-400);
-  --jp-border-color2: var(--md-grey-300);
-  --jp-border-color3: var(--md-grey-200);
+  --jp-border-color0: var(--nord0);
+  --jp-border-color1: var(--nord2);
+  --jp-border-color2: var(--nord2);
+  --jp-border-color3: var(--nord2);
   --jp-border-radius: 2px;
 
   /* UI Fonts
@@ -118,10 +148,10 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   /* Defaults use Material Design specification */
-  --jp-ui-font-color0: rgba(0, 0, 0, 1);
-  --jp-ui-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-ui-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-ui-font-color3: rgba(0, 0, 0, 0.38);
+  --jp-ui-font-color0: var(--nord5);
+  --jp-ui-font-color1: var(--nord5);
+  --jp-ui-font-color2: var(--nord4);
+  --jp-ui-font-color3: var(--nord4);
 
   /*
    * Use these against the brand/accent/warn/error colors.
@@ -192,11 +222,11 @@ all of MD as it is not optimized for dense, information rich UIs.
    * theme these would go from light to dark.
    */
 
-  --jp-layout-color0: white;
-  --jp-layout-color1: white;
-  --jp-layout-color2: var(--md-grey-200);
-  --jp-layout-color3: var(--md-grey-400);
-  --jp-layout-color4: var(--md-grey-600);
+  --jp-layout-color0: var(--nordb);
+  --jp-layout-color1: var(--nord0);
+  --jp-layout-color2: var(--nord0);
+  --jp-layout-color3: var(--nord0);
+  --jp-layout-color4: var(--nord0);
 
   /* Inverse Layout
    *
@@ -213,7 +243,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   /* Brand/accent */
 
   --jp-brand-color0: var(--md-blue-700);
-  --jp-brand-color1: var(--md-blue-500);
+  --jp-brand-color1: var(--nord3);
   --jp-brand-color2: var(--md-blue-300);
   --jp-brand-color3: var(--md-blue-100);
 
@@ -252,31 +282,27 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
 
-  --jp-cell-editor-background: var(--md-grey-100);
-  --jp-cell-editor-border-color: var(--md-grey-300);
+  --jp-cell-editor-background: var(--nord0);
+  --jp-cell-editor-border-color: var(--nord2);
   --jp-cell-editor-box-shadow: inset 0 0 2px var(--md-blue-300);
-  --jp-cell-editor-active-background: var(--jp-layout-color0);
-  --jp-cell-editor-active-border-color: var(--jp-brand-color1);
+  --jp-cell-editor-active-background: var(--nord1);
+  --jp-cell-editor-active-border-color: var(--nord3);
 
   --jp-cell-prompt-width: 64px;
   --jp-cell-prompt-font-family: 'Source Code Pro', monospace;
   --jp-cell-prompt-letter-spacing: 0px;
   --jp-cell-prompt-opacity: 1;
   --jp-cell-prompt-not-active-opacity: 0.5;
-  --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
-  /* A custom blend of MD grey and blue 600
-   * See https://meyerweb.com/eric/tools/color-blend/#546E7A:1E88E5:5:hex */
-  --jp-cell-inprompt-font-color: #307fc1;
-  /* A custom blend of MD grey and orange 600
-   * https://meyerweb.com/eric/tools/color-blend/#546E7A:F4511E:5:hex */
+  --jp-cell-prompt-not-active-font-color: var(--nord4);
+  --jp-cell-inprompt-font-color: var(--nord9);
   --jp-cell-outprompt-font-color: #bf5b3d;
 
   /* Notebook specific styles */
 
   --jp-notebook-padding: 10px;
   --jp-notebook-scroll-padding: 50%;
-  --jp-notebook-select-background: var(--jp-layout-color1);
-  --jp-notebook-multiselected-color: var(--md-blue-50);
+  --jp-notebook-select-background: var(--nord3);
+  --jp-notebook-multiselected-color: var(--nord3);
 
   /* Rendermime styles */
 
@@ -294,12 +320,12 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Toolbar specific styles */
 
-  --jp-toolbar-border-color: var(--jp-border-color1);
+  --jp-toolbar-border-color: var(--nord3);
   --jp-toolbar-micro-height: 8px;
-  --jp-toolbar-background: var(--jp-layout-color1);
+  --jp-toolbar-background: var(--nord0);
   --jp-toolbar-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.24);
   --jp-toolbar-header-margin: 4px 4px 0px 4px;
-  --jp-toolbar-active-background: var(--md-grey-300);
+  --jp-toolbar-active-background: var(--nord2);
 
   /* Input field styles */
 
@@ -308,40 +334,40 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-input-hover-background: var(--jp-layout-color1);
   --jp-input-background: var(--md-grey-100);
   --jp-input-border-color: var(--jp-border-color1);
-  --jp-input-active-border-color: var(--jp-brand-color1);
+  --jp-input-active-border-color: var(--nord9);
 
   /* General editor styles */
 
   --jp-editor-selected-background: #d9d9d9;
   --jp-editor-selected-focused-background: #d7d4f0;
-  --jp-editor-cursor-color: var(--jp-ui-font-color0);
+  --jp-editor-cursor-color: var(--nord4);
 
   /* Code mirror specific styles */
 
-  --jp-mirror-editor-keyword-color: #008000;
+  --jp-mirror-editor-keyword-color: var(--nord9);
   --jp-mirror-editor-atom-color: #88f;
-  --jp-mirror-editor-number-color: #080;
-  --jp-mirror-editor-def-color: #00f;
-  --jp-mirror-editor-variable-color: var(--md-grey-900);
-  --jp-mirror-editor-variable-2-color: #05a;
-  --jp-mirror-editor-variable-3-color: #085;
-  --jp-mirror-editor-punctuation-color: #05a;
-  --jp-mirror-editor-property-color: #05a;
-  --jp-mirror-editor-operator-color: #aa22ff;
-  --jp-mirror-editor-comment-color: #408080;
-  --jp-mirror-editor-string-color: #ba2121;
-  --jp-mirror-editor-string-2-color: #708;
-  --jp-mirror-editor-meta-color: #aa22ff;
-  --jp-mirror-editor-qualifier-color: #555;
-  --jp-mirror-editor-builtin-color: #008000;
-  --jp-mirror-editor-bracket-color: #997;
-  --jp-mirror-editor-tag-color: #170;
-  --jp-mirror-editor-attribute-color: #00c;
-  --jp-mirror-editor-header-color: blue;
-  --jp-mirror-editor-quote-color: #090;
-  --jp-mirror-editor-link-color: #00c;
-  --jp-mirror-editor-error-color: #f00;
-  --jp-mirror-editor-hr-color: #999;
+  --jp-mirror-editor-number-color: var(--nord);
+  --jp-mirror-editor-def-color: var(--nord6);
+  --jp-mirror-editor-variable-color: var(--nord4);
+  --jp-mirror-editor-variable-2-color: var(--nord4);
+  --jp-mirror-editor-variable-3-color: var9--nord4);
+  --jp-mirror-editor-punctuation-color: var(--nord6);
+  --jp-mirror-editor-property-color: var(--nord9);
+  --jp-mirror-editor-operator-color: var(--nord9);
+  --jp-mirror-editor-comment-color: var(--nord3);
+  --jp-mirror-editor-string-color: var(--nord14);
+  --jp-mirror-editor-string-2-color: var(--nord13); /* Nord13 usually for string regexp */
+  --jp-mirror-editor-meta-color: var(--nord10); /* Or some other Frost color. */
+  --jp-mirror-editor-qualifier-color: var(--nord12);
+  --jp-mirror-editor-builtin-color: var(--nord12); /* Perhaps Nord9... */
+  --jp-mirror-editor-bracket-color: var(--nord8);
+  --jp-mirror-editor-tag-color: var(--nord9);
+  --jp-mirror-editor-attribute-color: var(--nord7);
+  --jp-mirror-editor-header-color: var(--nord8); /* Perhaps Nord7... */
+  --jp-mirror-editor-quote-color: var(--nord14);
+  --jp-mirror-editor-link-color: var(--nord8);
+  --jp-mirror-editor-error-color: var(--nord11);
+  --jp-mirror-editor-hr-color: var(--idk);
 
   /* Vega extension styles */
 

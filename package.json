@@ -1,17 +1,22 @@
 {
-  "name": "jupyterlab-nord-theme",
-  "version": "0.19.1",
+  "name": "@jupyterlab/jupyterlab-nord-theme",
+  "version": "0.1.0",
   "description": "An arctic, north-bluish clean and elegant JupyterLab theme.",
-  "homepage": "https://github.com/jupyterlab/jupyterlab",
+  "homepage": "https://github.com/mullerrwd/jupyterlab-nord-theme",
   "bugs": {
-    "url": "https://github.com/jupyterlab/jupyterlab/issues"
+    "url": "https://github.com/mullerrwd/jupyterlab-nord-theme/issues"
   },
-  "license": "BSD-3-Clause",
-  "author": "Project Jupyter",
+  "license": "MIT",
+  "author": "mullerrwd",
   "files": [
     "lib/*.d.ts",
     "lib/*.js.map",
-    "lib/*.js"
+    "lib/*.js",
+    "static/*.css",
+    "static/*.ttf",
+    "static/*.eot",
+    "static/*.woff",
+    "static/*.woff2"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -20,28 +25,41 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jupyterlab/jupyterlab.git"
+    "url": "https://github.com/mullerrwd/jupyterlab-nord-theme.git"
   },
   "scripts": {
-    "build": "tsc -b",
+    "build": "run-p build:**",
+    "build:typescript": "tsc",
+    "build:webpack": "webpack",
     "clean": "rimraf lib",
     "prepublishOnly": "npm run build",
-    "watch": "tsc -b --watch"
+    "watch": "run-p watch:**",
+    "watch:typescript": "tsc -w",
+    "watch:webpack": "webpack --watch"
   },
   "dependencies": {
     "@jupyterlab/application": "^0.19.1",
-    "@jupyterlab/apputils": "^0.19.1"
+    "@jupyterlab/apputils": "^0.19.1",
+    "font-awesome": "~4.7.0"
   },
   "devDependencies": {
+    "style-loader": "~0.22.1",
+    "css-loader": "~0.28.7",
+    "extract-text-webpack-plugin": "~2.1.2",
+    "npm-run-all": "~4.1.1",
     "rimraf": "~2.6.2",
-    "typedoc": "~0.12.0",
-    "typescript": "~3.1.1"
+    "svg-url-loader": "~2.3.1",
+    "svgo": "~1.0.4",
+    "svgo-loader": "~2.1.0",
+    "typescript": "~2.8.3",
+    "url-loader": "~0.5.9",
+    "webpack": "~2.7.0"
   },
   "publishConfig": {
     "access": "public"
   },
   "jupyterlab": {
     "extension": true,
-    "themePath": "style/index.css"
+    "themeDir": "static"
   }
 }
