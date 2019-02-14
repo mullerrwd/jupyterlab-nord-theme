@@ -8,7 +8,7 @@ Based on the <a href="https://github.com/arcticicestudio/nord">Nord</a> color pa
 </p>
 
 
-
+### Project ON HOLD
 ---
 
 ## Required
